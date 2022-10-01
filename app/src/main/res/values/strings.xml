@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BookShelf</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="manage">Manage your books\non the go…</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="your_web_client_id">277422960172-jgrekn4oikh0h2nomo7numjlpu8pic4s.apps.googleusercontent.com</string>
+</resources>
