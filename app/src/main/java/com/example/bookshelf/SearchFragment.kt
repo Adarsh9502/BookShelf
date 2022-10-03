@@ -87,10 +87,10 @@ class SearchFragment : Fragment(), BookSearchAdapter.AddToShelf {
                 // TODO: handle exception
             }
 
-            var searchedQuery = binding.search.text.toString()
-            searchedQuery += "+inauthor"
+            val searchedQuery = binding.search.text.toString()
+            //searchedQuery += "+inauthor"
 
-            viewModel.getBooks(searchedQuery, "relevance")
+            viewModel.getBooks(searchedQuery, "relevance", 40)
             viewModel.myResponse.observe(viewLifecycleOwner, Observer { response ->
                 if (response.isSuccessful) {
                     binding.progressBar.visibility = View.GONE

@@ -11,11 +11,11 @@ import retrofit2.Response
 class SearchViewModel(private val repository: Repository): ViewModel() {
 
     val myResponse: MutableLiveData<Response<Books>> = MutableLiveData()
-    val error: MutableLiveData<String> = MutableLiveData()
-    fun getBooks(search: String, order: String) {
+    //val error: MutableLiveData<String> = MutableLiveData()
+    fun getBooks(search: String, order: String, results: Int) {
         viewModelScope.launch {
             try {
-                val response = repository.getBooks(search, order)
+                val response = repository.getBooks(search, order, results)
                 myResponse.value = response
             } catch (e: Exception) {
                 //TODO

@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
@@ -14,8 +13,7 @@ import com.example.bookshelf.dao.AddToShelfDao
 import com.example.bookshelf.databinding.FragmentBookShelfBinding
 import com.example.bookshelf.model.api.VolumeInfo
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
+
 
 class BookShelfFragment : Fragment() {
 
@@ -60,7 +58,7 @@ class BookShelfFragment : Fragment() {
         val horizontalLayout =
             LinearLayoutManager(requireActivity(), LinearLayoutManager.HORIZONTAL, false)
         binding.bookshelf.layoutManager = horizontalLayout
-        
+
     }
 
     override fun onStart() {
